@@ -20,7 +20,7 @@ body {
   position: relative;
   min-height: 100vh;
   min-height: 100svh;
-  padding-top: 6rem;
+  padding-top: 9rem;
   box-sizing: border-box;
   background-size: cover;
   background-position: center;
@@ -43,10 +43,27 @@ body {
   gap: 1rem;
 }
 
+.socials-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.socials a {
+  display: block;
+  padding: 9px;
+}
+
+.socials-row {
+  display: flex;
+  gap: 1rem;
+}
+
 .socials svg {
   display: block;
-  width: 4rem;
-  height: 4rem;
+  width: 58px;
+  height: 58px;
   fill: var(--yellow);
 }
 
@@ -120,6 +137,32 @@ h1 {
   text-align: center;
   color: var(--white);
   font-weight: 700;
+}
+
+@media (max-width: 1023px) {
+  .socials {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 21rem;
+    margin: 0 auto;
+  }
+
+  .socials-row,
+  .socials-column {
+    display: contents;
+  }
+
+  .socials svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .controls button {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 639px) {

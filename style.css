@@ -53,6 +53,11 @@ body {
 .socials a {
   display: block;
   padding: 9px;
+  transition: transform 0.1s;
+}
+
+.socials a:active {
+  transform: scale(0.85);
 }
 
 .socials-row {

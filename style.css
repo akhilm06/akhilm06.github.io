@@ -27,7 +27,7 @@ h1 {
   font-family: var(--font-heading);
   color: var(--pink);
   margin: 0;
-  font-size: clamp(7.5rem, 10vw, 12rem);
+  font-size: clamp(5rem, 10vw, 12rem);
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.05em;
@@ -40,8 +40,8 @@ h1 {
 
 
 .hero p {
-  margin: 0.5rem;
-  font-size: 3rem;
+  margin: 2rem;
+  font-size: clamp(1.9rem, 4vw, 3rem);
   text-align: center;
   color: var(--white);
   font-weight: 700;

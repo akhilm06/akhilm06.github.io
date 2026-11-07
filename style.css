@@ -1,0 +1,48 @@
+:root {
+  --white: #eceaef;
+  --navy-blue: #002245;
+  --sky-blue: #0187ab;
+  --pink: #e4216b;
+  --sky-pink: #d2afcd;
+  --font-heading: "Fredoka", system-ui, sans-serif;
+  --font-body: "Fredoka", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--navy-blue);
+  font-family: var(--font-body);
+  color: var(--white);
+}
+
+.hero {
+  min-height: 100vh;
+  padding-top: 6rem;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  color: var(--pink);
+  margin: 0;
+  font-size: clamp(7.5rem, 10vw, 12rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  word-spacing: -0em;
+  text-align: center;
+  /* text-transform: lowercase; */
+  /* -webkit-text-stroke: 5px var(--white);
+  paint-order: stroke fill; */
+}
+
+
+.hero p {
+  margin: 0.5;
+  font-size: 3rem;
+  text-align: center;
+  color: var(--white);
+  font-weight: 700;
+}

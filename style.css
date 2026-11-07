@@ -4,7 +4,7 @@
   --sky-blue: #0187ab;
   --pink: #e4216b;
   --sky-pink: #d2afcd;
-  --yellow: #F3F378;
+  --yellow: #ebe582;
   --font-heading: "Fredoka", system-ui, sans-serif;
   --font-body: "Fredoka", system-ui, sans-serif;
 }
@@ -20,7 +20,7 @@ body {
   position: relative;
   min-height: 100vh;
   min-height: 100svh;
-  padding-top: 9rem;
+  padding-top: 12rem;
   box-sizing: border-box;
   background-size: cover;
   background-position: center;
@@ -53,7 +53,7 @@ body {
 .socials a {
   display: block;
   padding: 9px;
-  transition: transform 0.1s;
+  transition: transform 0.1s, scale 0.15s;
 }
 
 .socials a:active {
@@ -72,7 +72,7 @@ body {
   fill: var(--yellow);
 }
 
-:root[data-accessible="true"] .socials svg {
+:root[data-contrast="true"] .socials svg {
   stroke: var(--navy-blue);
   stroke-width: 2.25;
   paint-order: stroke fill;
@@ -86,15 +86,29 @@ body {
   font-size: 4rem;
   font-weight: 700;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.3s, scale 0.15s;
 }
 
-:root[data-accessible="true"] .accessible-toggle {
+:root[data-contrast="true"] .contrast-toggle {
   transform: scaleX(-1);
 }
 
 .refresh.spinning .material-symbols-rounded {
   animation: spin 0.5s;
+}
+
+.music[aria-pressed="true"] .material-symbols-rounded {
+  /* The negative delay skips a quarter of a cycle so it starts in the middle. */
+  animation: bob 0.8s infinite alternate ease-in-out -0.4s;
+}
+
+@keyframes bob {
+  from {
+    transform: translateY(-0.3rem);
+  }
+  to {
+    transform: translateY(0.3rem);
+  }
 }
 
 @keyframes spin {
@@ -103,12 +117,12 @@ body {
   }
 }
 
-:root[data-accessible="true"] {
+:root[data-contrast="true"] {
   -webkit-text-stroke: 6px var(--navy-blue);
   paint-order: stroke fill;
 }
 
-:root[data-accessible="true"] .hero {
+:root[data-contrast="true"] .hero {
   filter: contrast(1.4);
 }
 
@@ -125,7 +139,7 @@ h1 {
   max-width: 8em;
   font-size: clamp(5rem, 10vw, 12rem);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.05;
   letter-spacing: 0.05em;
   word-spacing: -0em;
   text-align: center;
@@ -137,11 +151,38 @@ h1 {
 
 
 .hero p {
-  margin: 2rem;
+  margin: 1rem 2rem 2rem; /* top, sides, bottom */
   font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.4;
   text-align: center;
   color: var(--white);
   font-weight: 700;
+}
+
+/* Letter hover (also needs letter-hover.js enabled in index.html)
+.word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.letter {
+  display: inline-block;
+  transition: transform 0.15s;
+}
+
+@media (hover: hover) {
+  .letter:hover {
+    transform: scale(1.02, 1.08);
+  }
+}
+*/
+
+@media (hover: hover) {
+  /* `scale` is separate from `transform`, so it doesn't fight the contrast flip or the press effect. */
+  .controls button:hover,
+  .socials a:hover {
+    scale: 1.02 1.08;
+  }
 }
 
 @media (max-width: 1023px) {

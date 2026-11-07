@@ -8,26 +8,30 @@
     <script>
       // Runs before first paint so the saved setting doesn't flash.
       try {
-        if (localStorage.getItem("accessible") === "true") {
-          document.documentElement.dataset.accessible = "true";
+        if (localStorage.getItem("contrast") === "true") {
+          document.documentElement.dataset.contrast = "true";
         }
       } catch {}
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=block" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:wght@100..700&icon_names=contrast,refresh&display=block" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:wght@100..700&icon_names=contrast,music_note,refresh&display=block" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="cloud-selector.js" defer></script>
-    <script src="accessible-toggle.js" defer></script>
-</head>
+    <script src="contrast-toggle.js" defer></script>
+    <script src="music-toggle.js" defer></script>
+    <!-- <script src="letter-hover.js" defer></script> --></head>
 <body>
     <header class="hero">
       <div class="controls">
-        <button class="accessible-toggle" aria-label="Toggle accessible colors" aria-pressed="false">
+        <button class="contrast-toggle" aria-label="Toggle high contrast" aria-pressed="false">
           <span class="material-symbols-rounded" aria-hidden="true">contrast</span>
         </button>
-        <button class="refresh" aria-label="Refresh canvas">
+        <button class="music" aria-label="Toggle music" aria-pressed="false">
+          <span class="material-symbols-rounded" aria-hidden="true">music_note</span>
+        </button>
+        <button class="refresh"aria-label="Refresh canvas">
           <span class="material-symbols-rounded" aria-hidden="true">refresh</span>
         </button>
       </div>

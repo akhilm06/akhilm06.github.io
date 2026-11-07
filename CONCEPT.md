@@ -28,4 +28,8 @@ youtube channel
 
 Gr0ve (formerly lumeforms): my first startup. Naturally, deeply embarrassing to reminisce over. Transformed open-text feedback into context aware and actionable business intelligence, or, was basically a opinionated Typeform competitor. Good riddance (time of your life). 
 
-peek a bit above the fold to singal to scroll downwards. add the links. 
+peek a bit above the fold to singal to scroll downwards. add the links.
+
+solicit free lance? "Would love to contribute..."
+
+find like 30 royalty free songs, make it so a new one plays each day in sequence. 

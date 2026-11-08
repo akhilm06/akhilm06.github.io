@@ -67,8 +67,8 @@ body {
 
 .socials svg {
   display: block;
-  width: 58px;
-  height: 58px;
+  width: 40px;
+  height: 40px;
   fill: var(--yellow);
 }
 
@@ -83,7 +83,7 @@ body {
   background: none;
   border: none;
   color: var(--yellow);
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.3s, scale 0.15s;
@@ -181,7 +181,7 @@ h1 {
   /* `scale` is separate from `transform`, so it doesn't fight the contrast flip or the press effect. */
   .controls button:hover,
   .socials a:hover {
-    scale: 1.02 1.08;
+    scale: 1.1;
   }
 }
 
@@ -202,12 +202,12 @@ h1 {
   }
 
   .socials svg {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
   }
 
   .controls button {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
